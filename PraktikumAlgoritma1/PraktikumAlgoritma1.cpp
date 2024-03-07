@@ -33,12 +33,28 @@ void display() {		// Prosedur untuk menampilkan hasil
 	cout << "==============================" << endl;		// Output ke layar 
 	cout << "Element Array yang telah disusun" << endl;		// Output ke layar
 	cout << "==============================" << endl;		// Output ke layar
-	for (int j = 0; j < n; j++) {
+	for (int j = 0; j < n; j++) {				// Looping dengan j dimulai dari o hingga n-1
 		cout << "Data ke-" << j + 1 << "; ";
-		cout << a[j] << endl;
+		cout << a[j] << endl;					// Output ke layar
 	}
-	cout << endl;
+	cout << endl;								// Output baris kosong
 
 
 }
+
+void bubbleSortArray() {
+	int pass = 1;
+
+	for (pass; pass <= n - 1; pass + 1) {
+		for (int j = 0; j <= n - 1 - pass; j++) {
+			if (a[j] > a[j + 1]) {
+				int temp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = temp;
+			}
+		}
+	}
+}
+
+
 
